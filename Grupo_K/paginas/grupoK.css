@@ -40,6 +40,7 @@ header p{
     text-align:center;
     transition:0.4s;
     border:1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
 }
 
 .card:hover{
@@ -57,4 +58,75 @@ header p{
 
 .card h2{
     font-size:1.3rem;
+}
+
+.pais img{
+    width:150px;
+    height:100px;
+    object-fit:cover;
+    border-radius:10px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom:15px;
+}
+
+.pais{
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    transition: .3s;
+}
+
+.pais:hover{
+    transform: translateY(-5px);
+}
+
+.pais h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #38bdf8;
+}
+
+.pais h3{
+    color: #fbbf24;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.pais p,
+.pais li{
+    line-height: 1.7;
+    color: #e2e8f0;
+}
+
+.pais ul{
+    margin-left: 20px;
+}
+
+@media(max-width:768px){
+    body{
+        padding: 15px;
+    }
+
+    .pais{
+        padding: 20px;
+    }
+
+    .pais h2{
+        font-size: 1.6rem;
+    }
+}
+
+.pais{
+    display: none;
+}
+
+.pais.activa{
+    display: block;
 }

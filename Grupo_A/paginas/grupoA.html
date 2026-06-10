@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Grupo A - Mundial 2026</title>
+    <link rel="stylesheet" href="grupoA.css">
+</head>
+<body>
+
+    <header>
+        <h1>Grupo A</h1>
+        <p>Equipos mundialistas del Grupo A</p>
+    </header>
+
+    <nav>
+        <button onclick="mostrarSeccion('equipos')">Equipos</button>
+        <button onclick="mostrarSeccion('estadios')">Estadios</button>
+        <button onclick="mostrarSeccion('ciudades')">Ciudades</button>
+        <button onclick="mostrarSeccion('historia')">Historia</button>
+        <button onclick="mostrarSeccion('estadisticas')">Estadísticas</button>
+        <button onclick="mostrarSeccion('curiosidades')">Curiosidades</button>
+    </nav>
+
+    <main>
+
+        <section id="equipos" class="activa">
+            <h2>Equipos del Grupo A</h2>
+
+            <div class="equipo">
+                <h3>México</h3>
+                <img src="../img/mexico.png" alt="Bandera de México">
+                <p>México es una selección con mucha historia mundialista y cuenta con una gran afición.</p>
+            </div>
+
+            <div class="equipo">
+                <h3>Sudáfrica</h3>
+                <img src="../img/sudafrica.png" alt="Bandera de Sudáfrica">
+                <p>Sudáfrica es recordada por haber organizado el Mundial 2010.</p>
+            </div>
+
+            <div class="equipo">
+                <h3>Corea del Sur</h3>
+                <img src="../img/corea_del_sur.png" alt="Bandera de Corea del Sur">
+                <p>Corea del Sur es una selección asiática muy competitiva.</p>
+            </div>
+
+            <div class="equipo">
+                <h3>Dinamarca</h3>
+                <img src="../img/dinamarca.png" alt="Bandera de Dinamarca">
+                <p>Dinamarca es una selección europea conocida por su orden táctico y buen juego en equipo.</p>
+            </div>
+        </section>
+
+        <section id="estadios">
+            <h2>Estadios</h2>
+
+            <div class="card">
+                <h3>Estadio Azteca</h3>
+                <p>Ubicado en México, es uno de los estadios más importantes en la historia de los mundiales.</p>
+            </div>
+
+            <div class="card">
+                <h3>Estadio Soccer City</h3>
+                <p>Está en Sudáfrica y fue sede de la final del Mundial 2010.</p>
+            </div>
+
+            <div class="card">
+                <h3>Estadio de Seúl</h3>
+                <p>Fue uno de los escenarios importantes durante el Mundial de Corea y Japón 2002.</p>
+            </div>
+
+            <div class="card">
+                <h3>Parken Stadium</h3>
+                <p>Es uno de los estadios más conocidos de Dinamarca.</p>
+            </div>
+        </section>
+
+        <section id="ciudades">
+            <h2>Ciudades</h2>
+
+            <div class="card">
+                <h3>Ciudad de México</h3>
+                <p>Es una ciudad grande, con mucha cultura, historia y tradición futbolística.</p>
+            </div>
+
+            <div class="card">
+                <h3>Johannesburgo</h3>
+                <p>Es una de las ciudades más importantes de Sudáfrica y tuvo gran participación en el Mundial 2010.</p>
+            </div>
+
+            <div class="card">
+                <h3>Seúl</h3>
+                <p>Es la capital de Corea del Sur y una ciudad moderna con gran desarrollo tecnológico.</p>
+            </div>
+
+            <div class="card">
+                <h3>Copenhague</h3>
+                <p>Es la capital de Dinamarca y una de las ciudades más representativas del país.</p>
+            </div>
+        </section>
+
+        <section id="historia">
+            <h2>Historia</h2>
+
+            <p>
+                El Mundial de Fútbol es el torneo más importante de selecciones nacionales.
+                En este grupo participan países de diferentes continentes, lo que hace que los partidos sean variados e interesantes.
+            </p>
+
+            <p>
+                México tiene una larga participación en mundiales, Sudáfrica fue anfitriona en 2010,
+                Corea del Sur destacó en 2002 y Dinamarca ha tenido buenas participaciones en torneos internacionales.
+            </p>
+        </section>
+
+        <section id="estadisticas">
+            <h2>Estadísticas básicas</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Selección</th>
+                        <th>Continente</th>
+                        <th>Dato importante</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>México</td>
+                        <td>América</td>
+                        <td>Selección con muchas participaciones mundialistas.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sudáfrica</td>
+                        <td>África</td>
+                        <td>Fue anfitriona del Mundial 2010.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Corea del Sur</td>
+                        <td>Asia</td>
+                        <td>Llegó a semifinales en el Mundial 2002.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Dinamarca</td>
+                        <td>Europa</td>
+                        <td>Ha tenido buenas participaciones en torneos europeos y mundiales.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="curiosidades">
+            <h2>Curiosidades</h2>
+
+            <ul>
+                <li>México tiene una de las aficiones más grandes del mundo.</li>
+                <li>Sudáfrica organizó el primer Mundial realizado en África.</li>
+                <li>Corea del Sur sorprendió al mundo llegando lejos en 2002.</li>
+                <li>Dinamarca es conocida por su disciplina y juego colectivo.</li>
+                <li>Este grupo mezcla selecciones de América, África, Asia y Europa.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="grupoA.js"></script>
+</body>
+</html>

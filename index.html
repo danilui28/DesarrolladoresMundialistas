@@ -1,67 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo del Mundial</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <title>Desarrolladores del Futuro</title>
+  <link rel="stylesheet" href="prueba.css">
 </head>
+
 <body>
-    <header>
-        <h1>Grupos de la copa del mundo 2026</h1>
-        <p>Copa Mundial de la FIFA</p>
-    </header>
 
-<div class="grupos-container">
+  <!-- Encabezado -->
+  <header>
+    <h1>Desarrolladores del Futuro</h1>
+    <p>Proyecto Mundialista</p>
+  </header>
 
-    <a href="Grupo_A/paginas/01-grupoA.html" class="grupo-card">
-        <h2>GRUPO A</h2>
+  <!-- Navegación -->
+  <nav>
+    <button onclick="mostrarSeccion('inicio')">Inicio</button>
+    <button onclick="mostrarSeccion('grupos')">Grupos</button>
+    <button onclick="mostrarSeccion('equipos')">Equipos</button>
+    <button onclick="mostrarSeccion('integrantes')">Integrantes</button>
+  </nav>
+
+  <main>
+
+    <!-- Presentación del proyecto -->
+    <section id="inicio" class="activa">
+      <h2>Presentación del proyecto</h2>
+
+      <p>
+        Bienvenido al proyecto <strong>Desarrolladores del Futuro</strong>.
+      </p>
+
+      <p>
+        Este sitio web centraliza la información de los grupos mundialistas,
+        los equipos participantes y los integrantes del proyecto.
+      </p>
+    </section>
+
+    <!-- GRUPOS MUNDIALISTAS -->
+    <section id="grupos">
+      <h2>Grupos Mundialistas</h2>
+
+      <div class="contenedor-links">
+        <a href="/DesarrolladoresDelFuturo/Grupo_A/paginas/01-grupoA.html">Ver Grupo A</a>
+        <a href="/DesarrolladoresDelFuturo/Grupo_K/paginas/grupoK.html">Ver Grupo K</a>
+        <a href="/DesarrolladoresDelFuturo/Grupo_C/paginas/grupoC.html">Ver Grupo C</a>
+        <a href="/DesarrolladoresDelFuturo/Grupo_I/paginas/grupoI.html">Ver Grupo I</a>
+        <a href="/DesarrolladoresDelFuturo/Grupo_L/paginas/grupoL.html">Ver Grupo L</a>
+        <a href="grupos/grupoF.html">Ver Grupo E</a>
+      </div>
+    </section>
+
+    <!-- Equipos por grupo -->
+    <section id="equipos">
+      <h2>Equipos por Grupo</h2>
+
+      <!-- CESAR AMAGUAÑA trabaja aqui -->
+      <div class="grupo" id="grupo-a">
+        <h3>Grupo A</h3>
+
         <ul>
-            <li><img src="Grupo_A/img/mexico.png" class="flag"> México</li>
-            <li><img src="Grupo_A/img/sudafrica.png" class="flag"> Sudáfrica</li>
-            <li><img src="Grupo_A/img/corea_del_sur.png" class="flag"> Corea del Sur</li>
-            <li><img src="Grupo_A/img/dinamarca.png" class="flag"> República Checa</li>
+          <li><a href="/DesarrolladoresDelFuturo/Grupo_A/paginas/04-mexico.html">Mexico</a></li>
+          <li><a href="/DesarrolladoresDelFuturo/Grupo_A/paginas/05-sudafrica.html">Sudáfrica</a></li>
+          <li><a href="/DesarrolladoresDelFuturo/Grupo_A/paginas/06-coreaDelSur.html">Corea del Sur</a></li>
+          <li><a href="/DesarrolladoresDelFuturo/Grupo_A/paginas/07-dinamarca.html">Dinamarca</a></li>
         </ul>
-    </a>
+      </div>
 
-    <a href="Grupo_C/paginas/grupoC.html" class="grupo-card">
-        <h2>GRUPO C</h2>
+      <!-- LUIS MACIAS trabaja aqui -->
+      <div class="grupo" id="grupo-k">
+        <h3>Grupo K</h3>
+
         <ul>
-            <li><img src="Grupo_C/img/brasil.jpg" class="flag"> Brasil</li>
-            <li><img src="Grupo_C/img/marruecos.png" class="flag"> Marruecos</li>
-            <li><img src="Grupo_C/img/haiti.jpg" class="flag"> Haití</li>
-            <li><img src="Grupo_C/img/escocia.png" class="flag"> Escocia</li>
+          <li><a href="#">Inglaterra</a></li>
+          <li><a href="#">Irán</a></li>
+          <li><a href="#">Estados Unidos</a></li>
+          <li><a href="#">Gales</a></li>
         </ul>
-    </a>
+      </div>
 
-    <a href="Grupo_I/paginas/grupoI.html" class="grupo-card">
-    <h2>GRUPO I</h2>
-    <ul>
-        <li><img src="Grupo_I/img/francia.png" class="flag"> Francia</li>
-        <li><img src="Grupo_I/img/senegal.png" class="flag"> Senegal</li>
-        <li><img src="Grupo_I/img/irak.png" class="flag"> Irak</li>
-        <li><img src="Grupo_I/img/noruega.png" class="flag"> Noruega</li>
-    </ul>
-    </a>
+      <!-- JESSICA CISLEMA trabaja aqui -->
+      <div class="grupo" id="grupo-c">
+        <h3>Grupo C</h3>
 
-    <a href="Grupo_K/paginas/grupoK.html" class="grupo-card">
-        <h2>GRUPO K</h2>
         <ul>
-            <li><img src="Grupo_K/img/portugal.png" class="flag">Portugal</li>
-            <li><img src="Grupo_K/img/colombia.png" class="flag"> Colombia</li>
-            <li><img src="Grupo_K/img/congo.png" class="flag">🇨🇩 Congo</li>
-            <li><img src="Grupo_K/img/uzbekistan.png" class="flag"> Uzbekistán</li>
+          <li><a href="#">Equipo 1</a></li>
+          <li><a href="#">Equipo 2</a></li>
+          <li><a href="#">Equipo 3</a></li>
+          <li><a href="#">Equipo 4</a></li>
         </ul>
-    </a>
+      </div>
 
-    <a href="Grupo_L/paginas/grupoL.html" class="grupo-card">
-        <h2>GRUPO L</h2>
+      <!-- LUIS CARRILLO trabaja aquí -->
+      <div class="grupo" id="grupo-i">
+        <h3>Grupo I</h3>
+
         <ul>
-            <li><img src="Grupo_L/paginas/img/inglaterra/bandera_Inglaterra.jpg" class="flag"> Inglaterra</li>
-            <li><img src="Grupo_L/paginas/img/croatia/bandera_Croatia.jpg" class="flag"> Croacia</li>
-            <li><img src="Grupo_L/paginas/img/ghana/bandera_Ghana.jpg" class="flag"> Ghana</li>
-            <li><img src="Grupo_L/paginas/img/panama/bandera_Panama.jpg" class="flag"> Panamá</li>
+          <li><a href="#">Equipo 1</a></li>
+          <li><a href="#">Equipo 2</a></li>
+          <li><a href="#">Equipo 3</a></li>
+          <li><a href="#">Equipo 4</a></li>
         </ul>
-    </a>
+      </div>
 
-</div>
+      <!-- BYRON FARINANGO trabaja aquí -->
+      <div class="grupo" id="grupo-l">
+        <h3>Grupo L</h3>
+
+        <ul>
+          <li><a href="#">Equipo 1</a></li>
+          <li><a href="#">Equipo 2</a></li>
+          <li><a href="#">Equipo 3</a></li>
+          <li><a href="#">Equipo 4</a></li>
+        </ul>
+      </div>
+
+      <!-- FRESLY ANDINO trabaja aquí -->
+      <div class="grupo" id="grupo-e">
+        <h3>Grupo E</h3>
+
+        <ul>
+          <li><a href="#">Equipo 1</a></li>
+          <li><a href="#">Equipo 2</a></li>
+          <li><a href="#">Equipo 3</a></li>
+          <li><a href="#">Equipo 4</a></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Integrantes -->
+    <section id="integrantes">
+      <h2>Integrantes del Proyecto</h2>
+
+      <ul>
+        <li><a href="#">Luis Macias</a></li>
+        <li><a href="#">Cesar Amaguaña</a></li>
+        <li><a href="#">Jussica Cislema</a></li>
+        <li><a href="#">Luis Carrillo</a></li>
+        <li><a href="#">Byron Farinango</a></li>
+        <li><a href="#">Fresly Andino</a></li>
+      </ul>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Proyecto realizado por Desarrolladores del Futuro</p>
+  </footer>
+
+  <script src="practica.js"></script>
+
+</body>
+</html>

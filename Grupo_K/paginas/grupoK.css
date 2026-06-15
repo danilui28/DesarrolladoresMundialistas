@@ -61,8 +61,8 @@ header p{
 }
 
 .pais img{
-    width:150px;
-    height:100px;
+    width:200px;
+    height:130px;
     object-fit:cover;
     border-radius:10px;
     display: block;
@@ -71,7 +71,12 @@ header p{
 }
 
 .pais{
-    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.pais-card{
+    max-width: 1200px;
     margin: 40px auto;
     padding: 30px;
     border-radius: 20px;
@@ -82,7 +87,7 @@ header p{
     transition: .3s;
 }
 
-.pais:hover{
+.pais-card:hover{
     transform: translateY(-5px);
 }
 
@@ -90,7 +95,7 @@ header p{
     text-align: center;
     font-size: 2rem;
     margin-bottom: 25px;
-    color: #38bdf8;
+    color: white;
 }
 
 .pais h3{
@@ -123,10 +128,18 @@ header p{
     }
 }
 
-.pais{
-    display: none;
+a{
+  text-decoration: none;
+  color: white;
 }
 
-.pais.activa{
-    display: block;
+#pais{
+  background-color: #223451;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  height: 5rem;
 }

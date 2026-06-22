@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ce1126, #ffffff, #000000);
+
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+header {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+.contenedor {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.hero-equipo img { width: 120px; }
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.full-width { grid-column: span 2; }
+
+.info-card {
+  background: white;
+  padding: 20px;
+  border-left: 5px solid #ce1126;
+  border-radius: 12px;
+
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.btn-volver {
+  background: black;
+  color: white;
+  padding: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+}
+
+@media(max-width:600px){
+  .info-grid { grid-template-columns: 1fr; }
+}

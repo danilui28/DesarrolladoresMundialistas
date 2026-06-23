@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0b5ed7;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+}
+
+nav button {
+    background-color: #0b5ed7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+nav button:hover {
+    background-color: #084298;
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section {
+    display: none;
+}
+
+section.activa {
+    display: block;
+}
+
+.equipo {
+    background-color: #e9ecef;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.equipo img {
+    width: 150px;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.card {
+    background-color: #e9ecef;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background-color: #0b5ed7;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+ul {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+li {
+    margin-bottom: 10px;
+}

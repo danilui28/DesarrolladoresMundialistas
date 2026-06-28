@@ -95,25 +95,25 @@ cromosMundial.push(
     crearJugador(
         2,
 
-        "NOMBRE DEL JUGADOR 2",
+        "Thomas Müller",
 
-        "PAÍS DEL JUGADOR 2",
+        "Alemania",
 
-        "POSICIÓN DEL JUGADOR 2",
+        "Mediapunta / Delantero",
 
-        "img/nombre-jugador-2.jpg",
+        "imgJugadores/thomasMüller.png",
 
-        "img/bandera-pais-2.png",
+        "../Grupo_E/img/alemania.png",
 
         "#000000",
 
-        0,
+        44,
 
-        0,
+        126,
 
-        false,
+        true,
 
-        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 2."
+        "Solo Miroslav Klose ha marcado más goles mundialistas para Alemania; Müller suma 10 en tres ediciones."
     )
 );
 

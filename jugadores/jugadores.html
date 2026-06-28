@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Álbum Mundial Dinámico</title>
+
+    <!-- Conectamos el CSS -->
+    <link rel="stylesheet" href="jugadores.css">
+
+    <!-- Conectamos el JS con defer para que cargue después del HTML -->
+    <script src="jugadores.js" defer></script>
+</head>
+<body>
+
+    <header class="encabezado-album">
+        <h1>Álbum Mundial Dinámico</h1>
+        <p>Proyecto dinámico usando JavaScript y Git Flow</p>
+
+        <!-- Este contador queda preparado para que el Estudiante F lo mejore -->
+        <p id="contadorAlbum" class="contador-album">
+            Cromos cargados: 0
+        </p>
+    </header>
+
+    <nav class="menu-album">
+        <a href="../index.html">Inicio</a>
+        <a href="jugadores.html">Jugadores</a>
+    </nav>
+
+    <main>
+
+        <section class="seccion-album">
+
+            <h2>Jugadores del Mundial</h2>
+
+            <!-- 
+                Espacio preparado para que el Estudiante E agregue:
+                - input de búsqueda
+                - select de países
+            -->
+            <div id="herramientasAlbum" class="herramientas-album">
+                <!-- Aquí luego irán los filtros -->
+            </div>
+
+            <!-- 
+                Aquí JavaScript va a inyectar las tarjetas dinámicamente.
+                Este id es MUY IMPORTANTE.
+            -->
+            <div id="albumJugadores" class="album-grid">
+                <!-- Las tarjetas se crean desde jugadores.js -->
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

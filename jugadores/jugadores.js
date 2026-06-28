@@ -126,25 +126,25 @@ cromosMundial.push(
     crearJugador(
         3,
 
-        "NOMBRE DEL JUGADOR 3",
+        "Hirving Lozano",
 
-        "PAÍS DEL JUGADOR 3",
+        "Mexico",
 
-        "POSICIÓN DEL JUGADOR 3",
+        "Extremo",
 
-        "img/nombre-jugador-3.jpg",
+        "imgJugadores/hirvingLozano.png",
 
-        "img/bandera-pais-3.png",
+        "../Grupo_A/img/mexico.png",
 
-        "#000000",
+        "#00ff00",
 
-        0,
+        20,
 
-        0,
+        73,
 
-        false,
+        true,
 
-        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 3."
+        "Anotó el gol con el que México venció por primera vez a Alemania en un Mundial (Rusia 2018)."
     )
 );
 

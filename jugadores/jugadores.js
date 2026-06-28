@@ -157,25 +157,25 @@ cromosMundial.push(
     crearJugador(
         4,
 
-        "NOMBRE DEL JUGADOR 4",
+        "Son Heung-min",
 
-        "PAÍS DEL JUGADOR 4",
+        "Corea del Sur",
 
-        "POSICIÓN DEL JUGADOR 4",
+        "Delantero",
 
-        "img/nombre-jugador-4.jpg",
+        "imgJugadores/sonHeungMin.png",
 
-        "img/bandera-pais-4.png",
+        "../Grupo_A/img/corea_del_sur.png",
 
-        "#000000",
+        "#ff0000",
 
-        0,
+        41,
 
-        0,
+        117,
 
-        false,
+        true,
 
-        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 4."
+        "Primer asiático en ganar la Bota de Oro de la Premier League (temporada 2021-22)."
     )
 );
 
@@ -188,25 +188,25 @@ cromosMundial.push(
     crearJugador(
         5,
 
-        "NOMBRE DEL JUGADOR 5",
+        "Christian Eriksen",
 
-        "PAÍS DEL JUGADOR 5",
+        "Dinamarca",
 
-        "POSICIÓN DEL JUGADOR 5",
+        "Mediocampista ofensivo",
 
-        "img/nombre-jugador-5.jpg",
+        "imgJugadores/christianEriksen.png",
 
-        "img/bandera-pais-5.png",
+        "../Grupo_A/img/dinamarca.png",
 
-        "#000000",
+        "#ff0000",
 
-        0,
+        40,
 
-        0,
+        130,
 
-        false,
+        true,
 
-        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 5."
+        "Regresó a la élite y al gol en la Euro 2024 tras sufrir un paro cardíaco en la Euro 2020, convirtiéndose en símbolo de resiliencia."
     )
 );
 

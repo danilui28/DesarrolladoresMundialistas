@@ -219,25 +219,25 @@ cromosMundial.push(
     crearJugador(
         6,
 
-        "NOMBRE DEL JUGADOR 6",
+        "Benni McCarthy",
 
-        "PAÍS DEL JUGADOR 6",
+        "Sudáfrica",
 
-        "POSICIÓN DEL JUGADOR 6",
+        "Delantero",
 
-        "img/nombre-jugador-6.jpg",
+        "imgJugadores/benniMccarthy.png",
 
-        "img/bandera-pais-6.png",
+        "../Grupo_A/img/sudafrica.png",
 
-        "#000000",
+        "#ffd000",
 
-        0,
+        31,
 
-        0,
+        80,
 
-        false,
+        true,
 
-        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 6."
+        "Único sudafricano que ha ganado la UEFA Champions League (con el Porto en 2004)."
     )
 );
 

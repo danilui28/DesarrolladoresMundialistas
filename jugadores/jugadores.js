@@ -64,25 +64,25 @@ cromosMundial.push(
     crearJugador(
         1, // id único del jugador
 
-        "NOMBRE DEL JUGADOR 1", // nombre del jugador real
+        "Enner Valencia", // nombre del jugador real
 
-        "PAÍS DEL JUGADOR 1", // país del Grupo A o Grupo E
+        "Ecuador", // país del Grupo A o Grupo E
 
-        "POSICIÓN DEL JUGADOR 1", // ejemplo: Delantero, Mediocampista, Defensa, Arquero
+        "Delantero", // ejemplo: Delantero, Mediocampista, Defensa, Arquero
 
-        "img/nombre-jugador-1.jpg", // ruta de la imagen del jugador
+        "imgJugadores/ennerValencia.png", // ruta de la imagen del jugador
 
-        "img/bandera-pais-1.png", // ruta de la bandera del país
+        "../Grupo_E/img/ecuador.png", // ruta de la bandera del país
 
-        "#000000", // color representativo del país en formato hexadecimal
+        "#fffb00", // color representativo del país en formato hexadecimal
 
-        0, // goles del jugador
+        40, // goles del jugador
 
-        0, // partidos jugados
+        84, // partidos jugados
 
-        false, // true si es destacado, false si no
+        true, // true si es destacado, false si no
 
-        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 1."
+        "Máximo artillero de la selección ecuatoriana y único ecuatoriano con goles en tres Copas Mundiales distintas."
     )
 );
 

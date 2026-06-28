@@ -2,8 +2,6 @@
 // ARREGLO GLOBAL DEL ÁLBUM
 // =====================================================
 
-// Este arreglo empieza vacío.
-// Los estudiantes B y C van a agregar aquí los jugadores.
 const cromosMundial = [];
 
 
@@ -11,8 +9,6 @@ const cromosMundial = [];
 // FUNCIÓN CONSTRUCTORA / FÁBRICA DE JUGADORES
 // =====================================================
 
-// Esta función sirve para crear objetos de jugadores con la misma estructura.
-// Así todos los compañeros agregan datos de forma ordenada.
 function crearJugador(
     id,
     nombre,
@@ -47,80 +43,242 @@ function crearJugador(
 
 
 // =====================================================
-// ZONA PARA AGREGAR DATOS
+// DATOS DEL ESTUDIANTE B
+// GRUPO A Y GRUPO E
 // =====================================================
 
-// Ejemplo de cómo tus compañeros deberán agregar un jugador:
-//
-// cromosMundial.push(
-//     crearJugador(
-//         1,
-//         "Nombre del jugador",
-//         "País",
-//         "Posición",
-//         "img/jugador.png",
-//         "img/bandera.png",
-//         "#005BBB",
-//         10,
-//         25,
-//         true,
-//         "Curiosidad histórica del jugador."
-//     )
-// );
+// IMPORTANTE:
+// Como Estudiante B debes agregar 6 jugadores en total.
+// No son 6 jugadores por país.
+// Son 6 jugadores repartidos entre las selecciones del Grupo A y Grupo E.
+
+// Usa IDs del 1 al 6.
+// Esto evita conflictos con el Estudiante C, que normalmente usará IDs del 7 al 12.
+
+
+// =====================================================
+// JUGADOR 1
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        1, // id único del jugador
+
+        "NOMBRE DEL JUGADOR 1", // nombre del jugador real
+
+        "PAÍS DEL JUGADOR 1", // país del Grupo A o Grupo E
+
+        "POSICIÓN DEL JUGADOR 1", // ejemplo: Delantero, Mediocampista, Defensa, Arquero
+
+        "img/nombre-jugador-1.jpg", // ruta de la imagen del jugador
+
+        "img/bandera-pais-1.png", // ruta de la bandera del país
+
+        "#000000", // color representativo del país en formato hexadecimal
+
+        0, // goles del jugador
+
+        0, // partidos jugados
+
+        false, // true si es destacado, false si no
+
+        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 1."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 2
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        2,
+
+        "NOMBRE DEL JUGADOR 2",
+
+        "PAÍS DEL JUGADOR 2",
+
+        "POSICIÓN DEL JUGADOR 2",
+
+        "img/nombre-jugador-2.jpg",
+
+        "img/bandera-pais-2.png",
+
+        "#000000",
+
+        0,
+
+        0,
+
+        false,
+
+        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 2."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 3
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        3,
+
+        "NOMBRE DEL JUGADOR 3",
+
+        "PAÍS DEL JUGADOR 3",
+
+        "POSICIÓN DEL JUGADOR 3",
+
+        "img/nombre-jugador-3.jpg",
+
+        "img/bandera-pais-3.png",
+
+        "#000000",
+
+        0,
+
+        0,
+
+        false,
+
+        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 3."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 4
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        4,
+
+        "NOMBRE DEL JUGADOR 4",
+
+        "PAÍS DEL JUGADOR 4",
+
+        "POSICIÓN DEL JUGADOR 4",
+
+        "img/nombre-jugador-4.jpg",
+
+        "img/bandera-pais-4.png",
+
+        "#000000",
+
+        0,
+
+        0,
+
+        false,
+
+        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 4."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 5
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        5,
+
+        "NOMBRE DEL JUGADOR 5",
+
+        "PAÍS DEL JUGADOR 5",
+
+        "POSICIÓN DEL JUGADOR 5",
+
+        "img/nombre-jugador-5.jpg",
+
+        "img/bandera-pais-5.png",
+
+        "#000000",
+
+        0,
+
+        0,
+
+        false,
+
+        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 5."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 6
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        6,
+
+        "NOMBRE DEL JUGADOR 6",
+
+        "PAÍS DEL JUGADOR 6",
+
+        "POSICIÓN DEL JUGADOR 6",
+
+        "img/nombre-jugador-6.jpg",
+
+        "img/bandera-pais-6.png",
+
+        "#000000",
+
+        0,
+
+        0,
+
+        false,
+
+        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 6."
+    )
+);
 
 
 // =====================================================
 // FUNCIÓN PARA RENDERIZAR EL ÁLBUM
 // =====================================================
 
-// Esta función recorre el arreglo cromosMundial y crea una tarjeta por cada jugador.
 function renderizarAlbum(listaJugadores = cromosMundial) {
 
     const contenedorAlbum = document.getElementById("albumJugadores");
     const contadorAlbum = document.getElementById("contadorAlbum");
 
-    // Validación básica para evitar errores si el id no existe en el HTML.
     if (contenedorAlbum === null) {
         console.log("No se encontró el contenedor albumJugadores.");
         return;
     }
 
-    // Limpiamos el contenedor antes de volver a pintar tarjetas.
     contenedorAlbum.innerHTML = "";
 
-    // Actualizamos el contador básico.
     if (contadorAlbum !== null) {
         contadorAlbum.textContent = "Cromos cargados: " + listaJugadores.length;
     }
 
-    // Si todavía no hay jugadores, mostramos un mensaje.
     if (listaJugadores.length === 0) {
         contenedorAlbum.innerHTML = `
             <p class="mensaje-vacio">
-                Todavía no hay cromos registrados. 
-                Los estudiantes B y C deben agregar los jugadores al arreglo cromosMundial.
+                Todavía no hay cromos registrados.
             </p>
         `;
         return;
     }
 
-    // Recorremos el arreglo usando forEach, como pide el taller.
     listaJugadores.forEach(function(jugador) {
 
         const tarjeta = document.createElement("article");
 
         tarjeta.classList.add("card-cromo");
 
-        // Dejamos datos útiles para futuros filtros o funciones.
         tarjeta.setAttribute("data-id", jugador.id);
         tarjeta.setAttribute("data-pais", jugador.pais);
-
-        /*
-            Esta línea queda preparada para el Estudiante D.
-            Él puede activarla o mejorarla para aplicar fondos dinámicos.
-
-            tarjeta.style.backgroundColor = jugador.colorFondoHex;
-        */
 
         tarjeta.innerHTML = `
             <div class="cromo-imagen-contenedor">
@@ -177,6 +335,4 @@ function renderizarAlbum(listaJugadores = cromosMundial) {
 // EJECUCIÓN INICIAL
 // =====================================================
 
-// Cuando el archivo carga, se renderiza el álbum.
-// Al inicio aparecerá vacío porque cromosMundial no tiene datos todavía.
 renderizarAlbum();

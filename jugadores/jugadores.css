@@ -1,0 +1,167 @@
+/* =====================================================
+   ESTILOS GENERALES
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.encabezado-album {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.encabezado-album h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.encabezado-album p {
+    margin: 10px 0 0;
+}
+
+.contador-album {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   MENÚ
+===================================================== */
+
+.menu-album {
+    background-color: #1f2937;
+    padding: 12px;
+    text-align: center;
+}
+
+.menu-album a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+.menu-album a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   SECCIÓN PRINCIPAL
+===================================================== */
+
+.seccion-album {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.seccion-album h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   ZONA DE HERRAMIENTAS
+   Preparada para el Estudiante E
+===================================================== */
+
+.herramientas-album {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   CONTENEDOR DE TARJETAS
+===================================================== */
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+
+/* =====================================================
+   TARJETA BASE DEL CROMO
+   El Estudiante D puede mejorar esta parte
+===================================================== */
+
+.card-cromo {
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-cromo h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card-cromo p {
+    margin: 8px 0;
+}
+
+
+/* =====================================================
+   IMÁGENES
+===================================================== */
+
+.cromo-imagen {
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: #ddd;
+}
+
+.cromo-bandera {
+    width: 45px;
+    height: 30px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+}
+
+.cromo-curiosidad {
+    margin-top: 12px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+
+/* =====================================================
+   MENSAJE CUANDO NO HAY DATOS
+===================================================== */
+
+.mensaje-vacio {
+    grid-column: 1 / -1;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    color: #555;
+}

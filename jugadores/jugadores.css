@@ -103,25 +103,133 @@ body {
 
 
 /* =====================================================
-   TARJETA BASE DEL CROMO
-   El Estudiante D puede mejorar esta parte
+   DISEÑO DEL ESTUDIANTE D
+   TARJETAS MODERNAS Y FONDOS DINÁMICOS
 ===================================================== */
 
+/* Contenedor general de todas las tarjetas */
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+}
+
+
+/* Tarjeta principal del jugador */
 .card-cromo {
+    /* El color de fondo real se agregará desde JavaScript */
     background-color: white;
-    border-radius: 12px;
-    padding: 15px;
+
+    border-radius: 18px;
+    padding: 18px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+
+    overflow: hidden;
+
+    /* Animación de entrada */
+    animation: entradaCromo 0.6s ease;
+
+    /* Preparado para el hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-cromo h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+/* Efecto cuando el usuario pasa el mouse sobre la tarjeta */
+.card-cromo:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.30);
 }
 
-.card-cromo p {
+
+/* Animación inicial de las tarjetas */
+@keyframes entradaCromo {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* Contenedor de la imagen del jugador */
+.cromo-imagen-contenedor {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 12px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+}
+
+
+/* Imagen principal del jugador */
+.cromo-imagen {
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+    background-color: #ddd;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Información del jugador */
+.cromo-info {
+    background-color: rgba(255, 255, 255, 0.92);
+    color: #222;
+
+    padding: 14px;
+    border-radius: 14px;
+}
+
+
+/* Nombre del jugador */
+.cromo-info h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+
+/* Párrafos internos de la tarjeta */
+.cromo-info p {
     margin: 8px 0;
+    font-size: 15px;
+}
+
+
+/* Contenedor de la bandera */
+.cromo-bandera-contenedor {
+    margin: 10px 0;
+}
+
+
+/* Imagen de la bandera */
+.cromo-bandera {
+    width: 50px;
+    height: 32px;
+
+    object-fit: cover;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/* Curiosidad del jugador */
+.cromo-curiosidad {
+    margin-top: 12px;
+    font-size: 14px;
+    font-style: italic;
+    color: #333;
 }
 
 

@@ -480,6 +480,7 @@ function renderizarAlbum(listaJugadores = cromosMundial) {
         const tarjeta = document.createElement("article");
 
         tarjeta.classList.add("card-cromo");
+        tarjeta.style.backgroundColor = jugador.colorFondoHex;
 
         tarjeta.setAttribute("data-id", jugador.id);
         tarjeta.setAttribute("data-pais", jugador.pais);

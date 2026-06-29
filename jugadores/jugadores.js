@@ -251,9 +251,9 @@ cromosMundial.push(
 
         "Mediocampista / lateral izquierdo", // ejemplo: Arquero, Defensa, Mediocampista, Delantero
 
-        "img/nombre-jugador-7.jpg", // imagen del jugador guardada en la carpeta img
+        "imgJugadores/zéRoberto.png", // imagen del jugador guardada en la carpeta img
 
-        "img/bandera-pais-7.png", // imagen de la bandera guardada en la carpeta img
+        "../Grupo_C/img/brasil.jpg", // imagen de la bandera guardada en la carpeta img
 
         "#fffb00", // color representativo del país en hexadecimal
 
@@ -282,9 +282,9 @@ cromosMundial.push(
 
         "Delantero",
 
-        "img/nombre-jugador-8.jpg",
+        "imgJugadores/jamesMcFadden.png",
 
-        "img/bandera-pais-8.png",
+        "../Grupo_C/img/escocia.png",
 
         "#001aff",
 
@@ -313,9 +313,9 @@ cromosMundial.push(
 
         "Defensa central / lateral derecho",
 
-        "img/nombre-jugador-9.jpg",
+        "imgJugadores/lilianThuram.png",
 
-        "img/bandera-pais-9.png",
+        "../Grupo_I/img/francia.png",
 
         "#002fff",
 
@@ -344,9 +344,9 @@ cromosMundial.push(
 
         "Delantero",
 
-        "img/nombre-jugador-10.jpg",
+        "imgJugadores/younisMahmoud.png",
 
-        "img/bandera-pais-10.png",
+        "../Grupo_I/img/irak.png",
 
         "#66ff00",
 
@@ -375,9 +375,9 @@ cromosMundial.push(
 
         "Mediocampista defensivo",
 
-        "img/nombre-jugador-11.jpg",
+        "imgJugadores/papaBoubaDiop.png",
 
-        "img/bandera-pais-11.png",
+        "../Grupo_I/img/senegal.png",
 
         "#1eff00",
 
@@ -406,9 +406,9 @@ cromosMundial.push(
 
         "Lateral derecho",
 
-        "img/nombre-jugador-12.jpg",
+        "imgJugadores/achrafHakimi.png",
 
-        "img/bandera-pais-12.png",
+        "../Grupo_C/img/marruecos.png",
 
         "#ff0000",
 

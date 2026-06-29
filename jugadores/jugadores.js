@@ -424,7 +424,7 @@ cromosMundial.push(
 
 // =====================================================
 // FUNCIÓN DEL ESTUDIANTE C
-// CALCULAR TOTAL DE GOLES DE SUS JUGADORES
+// CALCULAR TOTAL DE GOLES DE LOS JUGADORES
 // =====================================================
 
 function calcularTotalGolesEstudianteC() {

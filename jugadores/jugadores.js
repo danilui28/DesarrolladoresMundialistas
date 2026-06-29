@@ -423,6 +423,30 @@ cromosMundial.push(
 );
 
 // =====================================================
+// FUNCIÓN DEL ESTUDIANTE C
+// CALCULAR TOTAL DE GOLES DE SUS JUGADORES
+// =====================================================
+
+function calcularTotalGolesEstudianteC() {
+
+    const jugadoresEstudianteC = cromosMundial.filter(function(jugador) {
+        return jugador.id >= 1 && jugador.id <= 12;
+    });
+
+    let totalGoles = 0;
+
+    jugadoresEstudianteC.forEach(function(jugador) {
+        totalGoles = totalGoles + jugador.estadisticas.goles;
+    });
+
+    const elementoTotal = document.getElementById("totalGolesEstudianteC");
+
+    if (elementoTotal !== null) {
+        elementoTotal.textContent = totalGoles;
+    }
+}
+
+// =====================================================
 // FUNCIÓN PARA RENDERIZAR EL ÁLBUM
 // =====================================================
 
@@ -516,3 +540,5 @@ function renderizarAlbum(listaJugadores = cromosMundial) {
 // =====================================================
 
 renderizarAlbum();
+
+calcularTotalGolesEstudianteC();

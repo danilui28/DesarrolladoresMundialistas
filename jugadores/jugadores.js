@@ -47,15 +47,6 @@ function crearJugador(
 // GRUPO A Y GRUPO E
 // =====================================================
 
-// IMPORTANTE:
-// Como Estudiante B debes agregar 6 jugadores en total.
-// No son 6 jugadores por país.
-// Son 6 jugadores repartidos entre las selecciones del Grupo A y Grupo E.
-
-// Usa IDs del 1 al 6.
-// Esto evita conflictos con el Estudiante C, que normalmente usará IDs del 7 al 12.
-
-
 // =====================================================
 // JUGADOR 1
 // =====================================================
@@ -241,6 +232,195 @@ cromosMundial.push(
     )
 );
 
+// =====================================================
+// DATOS DEL ESTUDIANTE C
+// GRUPO C Y GRUPO I
+// =====================================================
+
+// =====================================================
+// JUGADOR 7
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        7, // id único del jugador
+
+        "Zé Roberto", // nombre real del jugador
+
+        "Brasil", // país del Grupo C o Grupo I
+
+        "Mediocampista / lateral izquierdo", // ejemplo: Arquero, Defensa, Mediocampista, Delantero
+
+        "img/nombre-jugador-7.jpg", // imagen del jugador guardada en la carpeta img
+
+        "img/bandera-pais-7.png", // imagen de la bandera guardada en la carpeta img
+
+        "#fffb00", // color representativo del país en hexadecimal
+
+        6, // cantidad de goles del jugador
+
+        84, // cantidad de partidos jugados
+
+        false, // true si es destacado, false si no es destacado
+
+        "Con 42 años y 10 meses se convirtió en el goleador más veterano de la historia de la Copa Libertadores."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 8
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        8,
+
+        "James McFadden",
+
+        "Escocia",
+
+        "Delantero",
+
+        "img/nombre-jugador-8.jpg",
+
+        "img/bandera-pais-8.png",
+
+        "#001aff",
+
+        15,
+
+        48,
+
+        false,
+
+        "Su tiro de 30 m que dio el 1-0 a Escocia sobre Francia en París (2007) es considerado uno de los goles más memorables del país."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 9
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        9,
+
+        "Lilian Thuram",
+
+        "Francia",
+
+        "Defensa central / lateral derecho",
+
+        "img/nombre-jugador-9.jpg",
+
+        "img/bandera-pais-9.png",
+
+        "#002fff",
+
+        2,
+
+        142,
+
+        true,
+
+        "Sus únicos dos goles con Les Bleus los marcó —de una sola vez— en la semifinal del Mundial 1998 ante Croacia, sellando el pase a la final."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 10
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        10,
+
+        "Younis Mahmoud",
+
+        "Irak",
+
+        "Delantero",
+
+        "img/nombre-jugador-10.jpg",
+
+        "img/bandera-pais-10.png",
+
+        "#66ff00",
+
+        57,
+
+        148,
+
+        true,
+
+        "Capitaneó a Irak y anotó el gol del título en la final de la Copa AFC 2007, siendo además máximo goleador y MVP del torneo."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 11
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        11,
+
+        "Papa Bouba Diop",
+
+        "Senegal",
+
+        "Mediocampista defensivo",
+
+        "img/nombre-jugador-11.jpg",
+
+        "img/bandera-pais-11.png",
+
+        "#1eff00",
+
+        11,
+
+        63,
+
+        true,
+
+        "Anotó el gol que derrotó a la campeona Francia en el partido inaugural del Mundial 2002, debut absoluto de Senegal en la Copa."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 12
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        12,
+
+        "Achraf Hakimi",
+
+        "Marruecos",
+
+        "Lateral derecho",
+
+        "img/nombre-jugador-12.jpg",
+
+        "img/bandera-pais-12.png",
+
+        "#ff0000",
+
+        12,
+
+        99,
+
+        true,
+
+        "En 2025 fue 6.º en el Balón de Oro, la posición más alta jamás lograda por un futbolista marroquí."
+    )
+);
 
 // =====================================================
 // FUNCIÓN PARA RENDERIZAR EL ÁLBUM

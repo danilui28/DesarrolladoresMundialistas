@@ -49,8 +49,8 @@ body {
     padding: 12px;
     text-align: center;
 }
-
 .menu-album a {
+
     color: white;
     text-decoration: none;
     margin: 0 12px;
@@ -300,4 +300,93 @@ body {
 
 .resumen-estudiante-c strong {
     font-size: 20px;
+}
+/* =====================================================
+   FILTROS DEL ESTUDIANTE E
+   Buscador y filtro por país
+===================================================== */
+
+.herramientas-album {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    align-items: end;
+    justify-content: center;
+
+    margin-bottom: 15px;
+    padding: 18px;
+
+    background-color: white;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Cada bloque del filtro */
+.campo-filtro {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+/* Texto de los labels */
+.campo-filtro label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* Input y select */
+.campo-filtro input,
+.campo-filtro select {
+    width: 230px;
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+
+/* Cuando el usuario hace clic en input o select */
+.campo-filtro input:focus,
+.campo-filtro select:focus {
+    outline: none;
+    border-color: #1f2937;
+}
+
+
+/* Botón para limpiar filtros */
+#btnLimpiarFiltros {
+    padding: 10px 16px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #1f2937;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+#btnLimpiarFiltros:hover {
+    background-color: #111827;
+}
+
+
+/* Texto que muestra cuántos resultados hay */
+.resultado-filtros {
+    text-align: center;
+    margin-bottom: 25px;
+
+    font-weight: bold;
+    color: #333;
 }

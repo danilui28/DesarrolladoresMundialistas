@@ -467,13 +467,21 @@ function renderizarAlbum(listaJugadores = cromosMundial) {
     }
 
     if (listaJugadores.length === 0) {
-        contenedorAlbum.innerHTML = `
-            <p class="mensaje-vacio">
-                Todavía no hay cromos registrados.
-            </p>
-        `;
-        return;
+
+    let mensaje = "Todavía no hay cromos registrados.";
+
+    if (cromosMundial.length > 0) {
+        mensaje = "No se encontraron jugadores con los filtros seleccionados.";
     }
+
+    contenedorAlbum.innerHTML = `
+        <p class="mensaje-vacio">
+            ${mensaje}
+        </p>
+    `;
+
+    return;
+}
 
     listaJugadores.forEach(function(jugador) {
 
@@ -534,12 +542,149 @@ function renderizarAlbum(listaJugadores = cromosMundial) {
         contenedorAlbum.appendChild(tarjeta);
     });
 }
+// =====================================================
+// FUNCIONES DEL ESTUDIANTE E
+// FILTROS Y BÚSQUEDA DEL ÁLBUM
+// =====================================================
 
+
+// Esta función obtiene los países sin repetir.
+// Sirve para llenar automáticamente el select de países.
+function obtenerPaisesUnicos() {
+
+    const paises = [];
+
+    cromosMundial.forEach(function(jugador) {
+
+        if (!paises.includes(jugador.pais)) {
+            paises.push(jugador.pais);
+        }
+
+    });
+
+    paises.sort();
+
+    return paises;
+}
+
+
+// Esta función llena el select con los países que existen en cromosMundial.
+function cargarOpcionesDePaises() {
+
+    const filtroPais = document.getElementById("filtroPais");
+
+    if (filtroPais === null) {
+        console.log("No se encontró el select filtroPais.");
+        return;
+    }
+
+    const paises = obtenerPaisesUnicos();
+
+    filtroPais.innerHTML = `
+        <option value="">Todos los países</option>
+    `;
+
+    paises.forEach(function(pais) {
+
+        const opcion = document.createElement("option");
+
+        opcion.value = pais;
+        opcion.textContent = pais;
+
+        filtroPais.appendChild(opcion);
+
+    });
+}
+
+
+// Esta función filtra los jugadores por nombre y por país.
+function filtrarAlbum() {
+
+    const buscadorJugador = document.getElementById("buscadorJugador");
+    const filtroPais = document.getElementById("filtroPais");
+    const resultadoFiltros = document.getElementById("resultadoFiltros");
+
+    if (buscadorJugador === null || filtroPais === null) {
+        console.log("No se encontraron los elementos de filtro.");
+        return;
+    }
+
+    const textoBuscado = buscadorJugador.value.toLowerCase();
+    const paisSeleccionado = filtroPais.value;
+
+    const jugadoresFiltrados = cromosMundial.filter(function(jugador) {
+
+        const nombreJugador = jugador.nombre.toLowerCase();
+
+        const coincideNombre = nombreJugador.includes(textoBuscado);
+
+        const coincidePais = paisSeleccionado === "" || jugador.pais === paisSeleccionado;
+
+        return coincideNombre && coincidePais;
+
+    });
+
+    renderizarAlbum(jugadoresFiltrados);
+
+    if (resultadoFiltros !== null) {
+        resultadoFiltros.textContent = 
+            "Mostrando " + jugadoresFiltrados.length + " de " + cromosMundial.length + " cromos.";
+    }
+}
+
+
+// Esta función limpia el input, el select y vuelve a mostrar todos los jugadores.
+function limpiarFiltrosAlbum() {
+
+    const buscadorJugador = document.getElementById("buscadorJugador");
+    const filtroPais = document.getElementById("filtroPais");
+    const resultadoFiltros = document.getElementById("resultadoFiltros");
+
+    if (buscadorJugador !== null) {
+        buscadorJugador.value = "";
+    }
+
+    if (filtroPais !== null) {
+        filtroPais.value = "";
+    }
+
+    renderizarAlbum(cromosMundial);
+
+    if (resultadoFiltros !== null) {
+        resultadoFiltros.textContent = "Mostrando todos los cromos.";
+    }
+}
+
+
+// Esta función activa los eventos del input, select y botón.
+function inicializarFiltrosAlbum() {
+
+    const buscadorJugador = document.getElementById("buscadorJugador");
+    const filtroPais = document.getElementById("filtroPais");
+    const btnLimpiarFiltros = document.getElementById("btnLimpiarFiltros");
+
+    cargarOpcionesDePaises();
+
+    if (buscadorJugador !== null) {
+        buscadorJugador.addEventListener("input", filtrarAlbum);
+    }
+
+    if (filtroPais !== null) {
+        filtroPais.addEventListener("change", filtrarAlbum);
+    }
+
+    if (btnLimpiarFiltros !== null) {
+        btnLimpiarFiltros.addEventListener("click", limpiarFiltrosAlbum);
+    }
+}
 
 // =====================================================
 // EJECUCIÓN INICIAL
 // =====================================================
 
 renderizarAlbum();
+inicializarFiltrosAlbum();
 
-calcularTotalGolesEstudianteC();
+if (typeof calcularTotalGolesEstudianteC === "function") {
+    calcularTotalGolesEstudianteC();
+}

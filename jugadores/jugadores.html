@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Álbum Mundial Dinámico</title>
@@ -10,6 +11,7 @@
     <!-- Conectamos el JS con defer para que cargue después del HTML -->
     <script src="jugadores.js" defer></script>
 </head>
+
 <body>
 
     <header class="encabezado-album">
@@ -33,11 +35,37 @@
 
             <h2>Jugadores del Mundial</h2>
 
-            <!-- 
-                Espacio preparado para que el Estudiante E agregue:
-                - input de búsqueda
-                - select de países
-            -->
+
+            <!-- =====================================================
+     HERRAMIENTAS DEL ESTUDIANTE E
+     Buscador y filtro por país
+===================================================== -->
+
+            <div id="herramientasAlbum" class="herramientas-album">
+
+                <div class="campo-filtro">
+                    <label for="buscadorJugador">Buscar jugador:</label>
+
+                    <input type="text" id="buscadorJugador" placeholder="Escribe el nombre del jugador...">
+                </div>
+
+                <div class="campo-filtro">
+                    <label for="filtroPais">Filtrar por país:</label>
+
+                    <select id="filtroPais">
+                        <option value="">Todos los países</option>
+                    </select>
+                </div>
+
+                <button type="button" id="btnLimpiarFiltros">
+                    Limpiar filtros
+                </button>
+
+            </div>
+
+            <p id="resultadoFiltros" class="resultado-filtros">
+                Mostrando todos los cromos.
+            </p>
             <div id="herramientasAlbum" class="herramientas-album">
                 <!-- Aquí luego irán los filtros -->
             </div>
@@ -46,14 +74,14 @@
                     SECCIÓN DEL ESTUDIANTE C
                     Aquí se mostrará el total de goles de los jugadores
                 ===================================================== -->
-        <section class="resumen-estudiante-c">
-            <h3>Resumen Grupo A - E - C - I</h3>
+            <section class="resumen-estudiante-c">
+                <h3>Resumen Grupo A - E - C - I</h3>
 
-            <p>
-                Total de goles acumulados de los 12 jugadores:
-                <strong id="totalGolesEstudianteC">0</strong>
-            </p>
-        </section>
+                <p>
+                    Total de goles acumulados de los 12 jugadores:
+                    <strong id="totalGolesEstudianteC">0</strong>
+                </p>
+            </section>
 
             <!-- 
                 Aquí JavaScript va a inyectar las tarjetas dinámicamente.
@@ -68,4 +96,5 @@
     </main>
 
 </body>
+
 </html>

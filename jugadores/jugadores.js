@@ -805,8 +805,13 @@ function actualizarContadorDesbloqueo() {
 // =====================================================
 
 renderizarAlbum();
-inicializarFiltrosAlbum();
+
+if (typeof inicializarFiltrosAlbum === "function") {
+    inicializarFiltrosAlbum();
+}
 
 if (typeof calcularTotalGolesEstudianteC === "function") {
     calcularTotalGolesEstudianteC();
 }
+
+actualizarContadorDesbloqueo();

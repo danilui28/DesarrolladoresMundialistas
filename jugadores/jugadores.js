@@ -4,6 +4,14 @@
 
 const cromosMundial = [];
 
+// =====================================================
+// ESTUDIANTE F
+// ARREGLO DE CROMOS DESBLOQUEADOS
+// =====================================================
+
+// Aquí se guardan los IDs de los cromos que el usuario ya desbloqueó.
+const cromosDesbloqueados = [];
+
 
 // =====================================================
 // FUNCIÓN CONSTRUCTORA / FÁBRICA DE JUGADORES
@@ -448,6 +456,7 @@ function calcularTotalGolesEstudianteC() {
 
 // =====================================================
 // FUNCIÓN PARA RENDERIZAR EL ÁLBUM
+// MODIFICADA POR LOS ESTUDIANTES D, E Y F
 // =====================================================
 
 function renderizarAlbum(listaJugadores = cromosMundial) {
@@ -466,78 +475,116 @@ function renderizarAlbum(listaJugadores = cromosMundial) {
         contadorAlbum.textContent = "Cromos cargados: " + listaJugadores.length;
     }
 
+    actualizarContadorDesbloqueo();
+
     if (listaJugadores.length === 0) {
 
-    let mensaje = "Todavía no hay cromos registrados.";
+        let mensaje = "Todavía no hay cromos registrados.";
 
-    if (cromosMundial.length > 0) {
-        mensaje = "No se encontraron jugadores con los filtros seleccionados.";
+        if (cromosMundial.length > 0) {
+            mensaje = "No se encontraron jugadores con los filtros seleccionados.";
+        }
+
+        contenedorAlbum.innerHTML = `
+            <p class="mensaje-vacio">
+                ${mensaje}
+            </p>
+        `;
+
+        return;
     }
-
-    contenedorAlbum.innerHTML = `
-        <p class="mensaje-vacio">
-            ${mensaje}
-        </p>
-    `;
-
-    return;
-}
 
     listaJugadores.forEach(function(jugador) {
 
         const tarjeta = document.createElement("article");
 
         tarjeta.classList.add("card-cromo");
+
+        // Fondo dinámico agregado por el Estudiante D.
         tarjeta.style.backgroundColor = jugador.colorFondoHex;
 
+        // Datos útiles para filtros y desbloqueo.
         tarjeta.setAttribute("data-id", jugador.id);
         tarjeta.setAttribute("data-pais", jugador.pais);
 
+        // =====================================================
+        // ESTUDIANTE F
+        // Revisamos si el cromo ya fue desbloqueado
+        // =====================================================
+
+        const estaDesbloqueado = cromosDesbloqueados.includes(jugador.id);
+
+        if (estaDesbloqueado) {
+            tarjeta.classList.add("cromo-desbloqueado");
+        } else {
+            tarjeta.classList.add("cromo-bloqueado");
+        }
+
         tarjeta.innerHTML = `
-            <div class="cromo-imagen-contenedor">
-                <img 
-                    src="${jugador.urlImagen}" 
-                    alt="Imagen de ${jugador.nombre}" 
-                    class="cromo-imagen"
-                >
-            </div>
+            <div class="cromo-contenido">
 
-            <div class="cromo-info">
-                <h3>${jugador.nombre}</h3>
-
-                <p>
-                    <strong>País:</strong> ${jugador.pais}
-                </p>
-
-                <p>
-                    <strong>Posición:</strong> ${jugador.posicion}
-                </p>
-
-                <div class="cromo-bandera-contenedor">
+                <div class="cromo-imagen-contenedor">
                     <img 
-                        src="${jugador.urlBandera}" 
-                        alt="Bandera de ${jugador.pais}" 
-                        class="cromo-bandera"
+                        src="${jugador.urlImagen}" 
+                        alt="Imagen de ${jugador.nombre}" 
+                        class="cromo-imagen"
                     >
                 </div>
 
-                <p>
-                    <strong>Goles:</strong> ${jugador.estadisticas.goles}
-                </p>
+                <div class="cromo-info">
+                    <h3>${jugador.nombre}</h3>
 
-                <p>
-                    <strong>Partidos:</strong> ${jugador.estadisticas.partidos}
-                </p>
+                    <p>
+                        <strong>País:</strong> ${jugador.pais}
+                    </p>
 
-                <p>
-                    <strong>Destacado:</strong> ${jugador.destacado ? "Sí" : "No"}
-                </p>
+                    <p>
+                        <strong>Posición:</strong> ${jugador.posicion}
+                    </p>
 
-                <p class="cromo-curiosidad">
-                    ${jugador.curiosidad}
-                </p>
+                    <div class="cromo-bandera-contenedor">
+                        <img 
+                            src="${jugador.urlBandera}" 
+                            alt="Bandera de ${jugador.pais}" 
+                            class="cromo-bandera"
+                        >
+                    </div>
+
+                    <p>
+                        <strong>Goles:</strong> ${jugador.estadisticas.goles}
+                    </p>
+
+                    <p>
+                        <strong>Partidos:</strong> ${jugador.estadisticas.partidos}
+                    </p>
+
+                    <p>
+                        <strong>Destacado:</strong> ${jugador.destacado ? "Sí" : "No"}
+                    </p>
+
+                    <p class="cromo-curiosidad">
+                        ${jugador.curiosidad}
+                    </p>
+                </div>
+
             </div>
+
+            <button 
+                type="button" 
+                class="btn-desbloquear"
+                ${estaDesbloqueado ? "disabled" : ""}
+            >
+                ${estaDesbloqueado ? "Cromo desbloqueado" : "Desbloquear Cromo con Reto"}
+            </button>
         `;
+
+        const botonDesbloquear = tarjeta.querySelector(".btn-desbloquear");
+
+        if (botonDesbloquear !== null) {
+            botonDesbloquear.addEventListener("click", function() {
+                desbloquearCromo(jugador.id);
+            });
+        }
 
         contenedorAlbum.appendChild(tarjeta);
     });
@@ -676,6 +723,81 @@ function inicializarFiltrosAlbum() {
     if (btnLimpiarFiltros !== null) {
         btnLimpiarFiltros.addEventListener("click", limpiarFiltrosAlbum);
     }
+}
+
+// =====================================================
+// FUNCIONES DEL ESTUDIANTE F
+// SISTEMA DE DESBLOQUEO Y RECOMPENSAS
+// =====================================================
+
+
+// Esta función desbloquea un cromo usando su ID.
+function desbloquearCromo(idJugador) {
+
+    // Si el ID no está guardado, lo agregamos al arreglo.
+    if (!cromosDesbloqueados.includes(idJugador)) {
+        cromosDesbloqueados.push(idJugador);
+    }
+
+    // Buscamos la tarjeta en el HTML usando el data-id.
+    const tarjeta = document.querySelector('[data-id="' + idJugador + '"]');
+
+    if (tarjeta !== null) {
+
+        // Quitamos el estado bloqueado.
+        tarjeta.classList.remove("cromo-bloqueado");
+
+        // Agregamos el estado desbloqueado.
+        tarjeta.classList.add("cromo-desbloqueado");
+
+        // Agregamos la animación de destello.
+        tarjeta.classList.add("animacion-destello");
+
+        // Cambiamos el botón.
+        const boton = tarjeta.querySelector(".btn-desbloquear");
+
+        if (boton !== null) {
+            boton.textContent = "Cromo desbloqueado";
+            boton.disabled = true;
+        }
+
+        // Quitamos la animación después de medio segundo
+        // para que no quede pegada permanentemente.
+        setTimeout(function() {
+            tarjeta.classList.remove("animacion-destello");
+        }, 600);
+    }
+
+    actualizarContadorDesbloqueo();
+}
+
+
+// Esta función actualiza el contador de porcentaje en la cabecera.
+function actualizarContadorDesbloqueo() {
+
+    const contadorDesbloqueo = document.getElementById("contadorDesbloqueo");
+
+    if (contadorDesbloqueo === null) {
+        return;
+    }
+
+    const totalCromos = cromosMundial.length;
+    const totalDesbloqueados = cromosDesbloqueados.length;
+
+    let porcentaje = 0;
+
+    if (totalCromos > 0) {
+        porcentaje = Math.round((totalDesbloqueados * 100) / totalCromos);
+    }
+
+    contadorDesbloqueo.textContent = 
+        "Cromos desbloqueados: " + 
+        totalDesbloqueados + 
+        " de " + 
+        totalCromos + 
+        " (" + 
+        porcentaje + 
+        "%)";
 }
 
 // =====================================================

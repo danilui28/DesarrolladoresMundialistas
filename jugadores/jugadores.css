@@ -1,0 +1,483 @@
+/* =====================================================
+   ESTILOS GENERALES
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.encabezado-album {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.encabezado-album h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.encabezado-album p {
+    margin: 10px 0 0;
+}
+
+.contador-album {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   MENÚ
+===================================================== */
+
+.menu-album {
+    background-color: #1f2937;
+    padding: 12px;
+    text-align: center;
+}
+.menu-album a {
+
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+.menu-album a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   SECCIÓN PRINCIPAL
+===================================================== */
+
+.seccion-album {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.seccion-album h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   ZONA DE HERRAMIENTAS
+   Preparada para el Estudiante E
+===================================================== */
+
+.herramientas-album {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   CONTENEDOR DE TARJETAS
+===================================================== */
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+
+/* =====================================================
+   DISEÑO DEL ESTUDIANTE D
+   TARJETAS MODERNAS Y FONDOS DINÁMICOS
+===================================================== */
+
+/* Contenedor general de todas las tarjetas */
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+}
+
+
+/* Tarjeta principal del jugador */
+.card-cromo {
+    /* El color de fondo real se agregará desde JavaScript */
+    background-color: white;
+
+    border-radius: 18px;
+    padding: 18px;
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+
+    overflow: hidden;
+
+    /* Animación de entrada */
+    animation: entradaCromo 0.6s ease;
+
+    /* Preparado para el hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Efecto cuando el usuario pasa el mouse sobre la tarjeta */
+.card-cromo:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.30);
+}
+
+
+/* Animación inicial de las tarjetas */
+@keyframes entradaCromo {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* Contenedor de la imagen del jugador */
+.cromo-imagen-contenedor {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 12px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+}
+
+
+/* Imagen principal del jugador */
+.cromo-imagen {
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+    background-color: #ddd;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Información del jugador */
+.cromo-info {
+    background-color: rgba(255, 255, 255, 0.92);
+    color: #222;
+
+    padding: 14px;
+    border-radius: 14px;
+}
+
+
+/* Nombre del jugador */
+.cromo-info h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+
+/* Párrafos internos de la tarjeta */
+.cromo-info p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+
+/* Contenedor de la bandera */
+.cromo-bandera-contenedor {
+    margin: 10px 0;
+}
+
+
+/* Imagen de la bandera */
+.cromo-bandera {
+    width: 50px;
+    height: 32px;
+
+    object-fit: cover;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/* Curiosidad del jugador */
+.cromo-curiosidad {
+    margin-top: 12px;
+    font-size: 14px;
+    font-style: italic;
+    color: #333;
+}
+
+
+/* =====================================================
+   IMÁGENES
+===================================================== */
+
+.cromo-imagen {
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: #ddd;
+}
+
+.cromo-bandera {
+    width: 45px;
+    height: 30px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+}
+
+.cromo-curiosidad {
+    margin-top: 12px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+
+/* =====================================================
+   MENSAJE CUANDO NO HAY DATOS
+===================================================== */
+
+.mensaje-vacio {
+    grid-column: 1 / -1;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    color: #555;
+}
+
+/* =====================================================
+   RESUMEN DEL ESTUDIANTE C
+   Muestra el total de goles de sus 6 jugadores
+===================================================== */
+
+.resumen-estudiante-c {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.resumen-estudiante-c h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.resumen-estudiante-c p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.resumen-estudiante-c strong {
+    font-size: 20px;
+}
+/* =====================================================
+   FILTROS DEL ESTUDIANTE E
+   Buscador y filtro por país
+===================================================== */
+
+.herramientas-album {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    align-items: end;
+    justify-content: center;
+
+    margin-bottom: 15px;
+    padding: 18px;
+
+    background-color: white;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Cada bloque del filtro */
+.campo-filtro {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+/* Texto de los labels */
+.campo-filtro label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* Input y select */
+.campo-filtro input,
+.campo-filtro select {
+    width: 230px;
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+
+/* Cuando el usuario hace clic en input o select */
+.campo-filtro input:focus,
+.campo-filtro select:focus {
+    outline: none;
+    border-color: #1f2937;
+}
+
+
+/* Botón para limpiar filtros */
+#btnLimpiarFiltros {
+    padding: 10px 16px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #1f2937;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+#btnLimpiarFiltros:hover {
+    background-color: #111827;
+}
+
+
+/* Texto que muestra cuántos resultados hay */
+.resultado-filtros {
+    text-align: center;
+    margin-bottom: 25px;
+
+    font-weight: bold;
+    color: #333;
+}
+
+/* =====================================================
+   ESTUDIANTE F
+   SISTEMA DE DESBLOQUEO DE CROMOS
+===================================================== */
+
+
+/* Contador de desbloqueo en la cabecera */
+.contador-desbloqueo {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/* El contenido del cromo tendrá transición al desbloquearse */
+.cromo-contenido {
+    transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+
+/* Estado inicial: cromo bloqueado */
+.card-cromo.cromo-bloqueado .cromo-contenido {
+    filter: grayscale(100%) blur(2px);
+    opacity: 0.65;
+}
+
+
+/* Estado después de desbloquear */
+.card-cromo.cromo-desbloqueado .cromo-contenido {
+    filter: none;
+    opacity: 1;
+}
+
+
+/* Botón de desbloqueo */
+.btn-desbloquear {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #111827;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+
+.btn-desbloquear:hover {
+    transform: scale(1.03);
+    background-color: #374151;
+}
+
+
+/* Botón cuando el cromo ya está desbloqueado */
+.btn-desbloquear:disabled {
+    background-color: #6b7280;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* Animación de destello */
+.animacion-destello {
+    animation: flash 0.5s ease;
+}
+
+
+@keyframes flash {
+    0% {
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.95);
+        transform: scale(1.04);
+    }
+
+    100% {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+        transform: scale(1);
+    }
+}

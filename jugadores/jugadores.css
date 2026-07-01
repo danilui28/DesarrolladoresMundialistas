@@ -390,3 +390,94 @@ body {
     font-weight: bold;
     color: #333;
 }
+
+/* =====================================================
+   ESTUDIANTE F
+   SISTEMA DE DESBLOQUEO DE CROMOS
+===================================================== */
+
+
+/* Contador de desbloqueo en la cabecera */
+.contador-desbloqueo {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/* El contenido del cromo tendrá transición al desbloquearse */
+.cromo-contenido {
+    transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+
+/* Estado inicial: cromo bloqueado */
+.card-cromo.cromo-bloqueado .cromo-contenido {
+    filter: grayscale(100%) blur(2px);
+    opacity: 0.65;
+}
+
+
+/* Estado después de desbloquear */
+.card-cromo.cromo-desbloqueado .cromo-contenido {
+    filter: none;
+    opacity: 1;
+}
+
+
+/* Botón de desbloqueo */
+.btn-desbloquear {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #111827;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+
+.btn-desbloquear:hover {
+    transform: scale(1.03);
+    background-color: #374151;
+}
+
+
+/* Botón cuando el cromo ya está desbloqueado */
+.btn-desbloquear:disabled {
+    background-color: #6b7280;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* Animación de destello */
+.animacion-destello {
+    animation: flash 0.5s ease;
+}
+
+
+@keyframes flash {
+    0% {
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.95);
+        transform: scale(1.04);
+    }
+
+    100% {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+        transform: scale(1);
+    }
+}
